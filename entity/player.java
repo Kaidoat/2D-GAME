@@ -25,6 +25,10 @@ public class player extends entity {
     speed = 4;
   }
 
+  public void getPlayerImage(){
+
+  }
+
   public void update(){
 
     if (keyH.upPressed == true){
