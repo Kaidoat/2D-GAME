@@ -3,6 +3,7 @@ package main;
 import javax.swing.*;
 import java.awt.*;
 import entity.player;
+import tile.TileManager;
 
 public class GamePanel extends JPanel implements Runnable {
 
@@ -18,14 +19,10 @@ public class GamePanel extends JPanel implements Runnable {
     int FPS = 60;
 
 
-
+    TileManager tileM = new TileManager(this);
     KeyHandler keyH = new KeyHandler();
     Thread gameThread;
     player player = new player(this,keyH);
-
-    int playerX = 100;
-    int playerY = 100;
-    int playerSpeed = 4;
 
 
     public GamePanel() {
@@ -84,9 +81,10 @@ if (timer >= 1000000000){
   public void paintComponent(Graphics g){
 
       super.paintComponent(g);
-      int i = 100;
+
 
       Graphics2D g2 = (Graphics2D)g;
+      tileM.draw(g2);
       player.draw(g2);
 
       g2.dispose();
