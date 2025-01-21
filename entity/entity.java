@@ -10,4 +10,5 @@ public class entity {
   public BufferedImage face, gauche,droite,dos;
   public String direction;
 
+
 }
