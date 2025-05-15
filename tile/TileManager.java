@@ -22,9 +22,9 @@ public class TileManager {
     this.gp = gp;
 
     tile = new Tile[MAX_TILE_NB];
-    mapTileNum = new int[gp.maxScreenCol][gp.maxScreenRow];
+    mapTileNum = new int[gp.maxScreenRow][gp.maxScreenCol];
     getTileImage();
-    //loadMap();
+    loadMap();
 
   }
 

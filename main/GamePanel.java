@@ -88,6 +88,7 @@ if (timer >= 1000000000){
       tileM.draw(g2);
       player.draw(g2);
 
+
       g2.dispose();
 
 
